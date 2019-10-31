@@ -1,0 +1,92 @@
+<html>
+
+<head>
+        <meta charset="utf-8">
+
+        <title>Dibujando Con Canvas</title>
+
+        <style type="text/css">
+                body {
+                        background-color: #0F111A;
+                        color: white;
+                        font-family: "Seravek", Calibri;
+                }
+
+                .container {
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        max-width: 800px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                }
+
+                .formulario {
+                        display: flex;
+                        flex-direction: column;
+                }
+
+                .formulario input {
+                        margin-bottom: 10px;
+                        padding: 5px;
+                        font-size: 2em;
+                        background-color: transparent;
+                        color: white;
+                        border-radius: 5px;
+                        text-align: center;
+                }
+
+                .formulario input:focus {
+                        outline: 0;
+                }
+
+                .formulario input:active {
+                        outline: 0;
+                }
+
+                button {
+                        background-color: rgb(35, 40, 61);
+                        border-color: white;
+                        color: white;
+                        font-size: 20px;
+                        border-radius: 5px;
+                }
+
+                button:focus {
+                        outline: 0;
+                }
+
+                button:hover {
+                        background-color: rgb(19, 21, 32);
+                        cursor: pointer;
+                }
+        </style>
+
+</head>
+
+<body>
+        <div class="container">
+                <h1>Dibujo En Canvas</h1>
+                <P>
+
+                        <div class="formulario">
+
+                                <input type="text" placeholder="¿Cuantas Lineas Quieres?" id="texto_lineas" />
+                                <p>
+                                        <input onKeyup="this.value=this.value.toUpperCase()" type="text" id="texto_color" placeholder="Escribe Un Color" />
+                                        <p>
+                                                <input type="button" value="Dibujar" id="botoncito" />
+
+                                                <input required type="button" value="Rehacer"
+                                                        onclick="window.location.reload();" />
+                                        </P>
+
+                                        <canvas width="300" height="300" id="dibujito"></canvas>
+
+                                        <p>Asi queda tu dibujo</p>
+                                        <script src="dibujo.js"></script>
+
+</body>
+
+</html>
